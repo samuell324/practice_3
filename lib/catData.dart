@@ -35,15 +35,15 @@ class CatData {
         childFriendly = json['child_friendly'];
 
   Map<String, dynamic> toJson() => {
-    'id': id,
-    'name' :name,
-    'cfa_url' :cfaUrl,
-    'temperament' :temperament,
-    'origin' :origin,
-    'country_codes' : countryCodes,
-    'country_code' :countryCode,
-    'description' :description,
-    'life_span' :lifeSpan,
-    'child_friendly' :childFriendly,
-  };
+        'id': id,
+        'name': name,
+        'cfa_url': cfaUrl,
+        'temperament': temperament,
+        'origin': origin,
+        'country_codes': countryCodes,
+        'country_code': countryCode,
+        'description': description,
+        'life_span': lifeSpan,
+        'child_friendly': childFriendly,
+      };
 }

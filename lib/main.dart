@@ -15,10 +15,9 @@ Future<List<CatData>> fetchCats(http.Client client) async {
 }
 
 List<CatData> parseCat(responseBody) {
-  final parsed = jsonDecode(responseBody) as Map <String, dynamic>;
+  final parsed = jsonDecode(responseBody) as Map<String, dynamic>;
   return parsed[''].map<CatData>((json) => CatData.fromJson(json)).toList();
 }
-
 
 class MainPage extends StatefulWidget {
   @override
@@ -37,5 +36,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
