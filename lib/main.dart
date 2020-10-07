@@ -7,7 +7,7 @@ import 'widgets/catList.dart';
 import 'models/catData.dart';
 
 void main() {
-  runApp(MainPage());
+  runApp(AnimalsListScreen());
 }
 
 Future<List<CatData>> fetchCats(http.Client client) async {
@@ -20,12 +20,12 @@ List<CatData> parseCat(responseBody) {
   return parsed.map<CatData>((json) => CatData.fromJson(json)).toList();
 }
 
-class MainPage extends StatefulWidget {
+class AnimalsListScreen extends StatefulWidget {
   @override
-  _MainPageState createState() => _MainPageState();
+  _AnimalListScreenState createState() => _AnimalListScreenState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _AnimalListScreenState extends State<AnimalsListScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
