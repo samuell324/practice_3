@@ -9,7 +9,7 @@ class CatList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return PageView.builder(
       itemCount: _catList.length,
       itemBuilder: (context, index) {
         return Card(
@@ -42,7 +42,7 @@ class CatList extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
             ],
           ),
         );
