@@ -43,6 +43,10 @@ class _AnimalListScreenState extends State<AnimalsListScreen> {
                       )
                     : Center(child: CircularProgressIndicator());
               })),
+        appBar: AppBar(
+          title: Text('Practice 3'),
+        ),
+      ),
     );
   }
 }
