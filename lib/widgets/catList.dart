@@ -13,16 +13,38 @@ class CatList extends StatelessWidget {
       itemCount: _catList.length,
       itemBuilder: (context, index) {
         return Card(
-          elevation: 5,
-          margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          child: Container(
-              padding: EdgeInsets.all(15),
-              child: ListTile(
-                title: Text(
-                  _catList[index].name,
-                  style: TextStyle(fontSize: 18, color: Colors.black),
+          child: Column(
+            children: [
+              Card(
+                child: ListTile(
+                  title: Text(_catList[index].name),
                 ),
-              )),
+              ),
+              IntrinsicWidth(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                      child: Column (
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text ('ID: ${_catList[index].id}'),
+                          Text ('Country code: ${_catList[index].countryCodes}'),
+                          Text ('Temperament: ${_catList[index].temperament}'),
+                          Text ('Origin: ${_catList[index].origin}')
+                        ],
+                      )
+                    ),
+                    Expanded(
+                      child: Card(
+                        child: Text(_catList[index].description),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         );
       },
     );
