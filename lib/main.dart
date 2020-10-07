@@ -30,7 +30,9 @@ class _MainPageState extends State<MainPage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Practice 3'),
+          title: Text(
+            'Cats and Dogs',
+          ),
         ),
       ),
     );
